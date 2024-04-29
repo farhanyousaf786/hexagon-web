@@ -1,0 +1,291 @@
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    margin: 0;
+    color: #555;
+}
+
+
+.phone-icon {
+    /* If using a font icon, specify the size to ensure it aligns properly with the text */
+    font-size: 20px;
+}
+
+
+#wrap {
+    position: relative;
+}
+
+#header {
+    background-color: #ffffff;
+    height: 100px;
+    /* Adjusted height for content */
+    width: 100%;
+    color: #0a0059;
+    font-size: 40px;
+    line-height: 40px;
+    padding: 10px 0;
+    /* Reduced padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 0;
+    position: relative;
+}
+
+.logo-container .header-logo {
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.phone-box {
+    margin-top: 10px;
+    width: 200px;
+    /* This can also be set in percentages or vw for responsiveness */
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff45;
+    border-radius: 15px;
+    color: #000649;
+    border: 2px solid #000649;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+@keyframes slow-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+}
+
+.contact-info {
+    font-size: 16px;
+    /* Smaller font size for contact info */
+}
+
+#nav {
+    height: 80px;
+    line-height: 80px;
+    background-color: #000947;
+    text-align: center;
+    z-index: 100;
+    /* border-bottom: 1px solid #ffffff; */
+    position: relative;
+    width: 100%;
+    left: 0;
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    margin-bottom: 0PX;
+}
+
+#nav.fixed {
+    position: fixed;
+    top: 0;
+    /* opacity: 0.9; */
+    width: 100%;
+}
+
+#top {
+    display: none;
+    /* Initially hidden */
+    background: #f4726d;
+    color: #fff;
+    padding: 5px 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 9999;
+}
+
+#top[style="display: block;"] {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.nav-button {
+    height: 50px;
+    /* background-color: white; */
+    /* White background */
+    color: #ffffff;
+    /* Blue text */
+    padding: 10px 20px;
+    background-color: #000947;
+
+    /* Padding inside the buttons */
+    margin: 0 10px;
+    /* Margin between buttons */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-weight: bold;
+    /* Bold font */
+    border: none;
+    /* No border */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transition for hover effects */
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+.nav-button:hover {
+    background-color: #ffffff;
+    /* Blue background on hover */
+    color: rgb(0, 22, 93);
+    /* White text on hover */
+}
+
+
+@media (max-width: 992px) {
+
+
+    .phone-box {
+        margin-top: 10px;
+        width: 170px;
+        /* This can also be set in percentages or vw for responsiveness */
+        overflow: hidden;
+        position: relative;
+        background-color: #ffffff45;
+        border-radius: 15px;
+        color: #000649;
+        border: 1px solid #000649;
+        padding: 5px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .logo-container .header-logo {
+        height: 90px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 10px;
+    }
+
+    .nav-button {
+        height: 50px;
+        /* background-color: white; */
+        /* White background */
+        color: #ffffff;
+        /* Blue text */
+        padding: 10px 20px;
+        background-color: #000947;
+    
+        /* Padding inside the buttons */
+        margin: 0 10px;
+        /* Margin between buttons */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+        font-weight: bold;
+        /* Bold font */
+        border: none;
+        /* No border */
+        transition: background-color 0.3s, color 0.3s;
+        /* Transition for hover effects */
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 15px;
+    
+    }
+    
+    .nav-button:hover {
+        background-color: #ffffff;
+        /* Blue background on hover */
+        color: rgb(0, 22, 93);
+        /* White text on hover */
+    }
+    
+
+
+}
+
+
+@media (max-width: 576px) {
+    .phone-box {
+        margin-top: 5px;
+        width: 130px;
+        /* This can also be set in percentages or vw for responsiveness */
+        overflow: hidden;
+        position: relative;
+        background-color: #ffffff45;
+        border-radius: 15px;
+        color: #000649;
+        border: 1px solid #000649;
+        padding: 2px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .logo-container .header-logo {
+        height: 80px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 10px;
+    }
+
+
+    .nav-button {
+        height: 50px;
+        /* background-color: white; */
+        /* White background */
+        color: #ffffff;
+        /* Blue text */
+        padding: 10px 20px;
+        background-color: #000947;
+    
+        /* Padding inside the buttons */
+        margin: 0 10px;
+        /* Margin between buttons */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+        font-weight: bold;
+        /* Bold font */
+        border: none;
+        /* No border */
+        transition: background-color 0.3s, color 0.3s;
+        /* Transition for hover effects */
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 10px;
+    
+    }
+    
+    .nav-button:hover {
+        background-color: #ffffff;
+        /* Blue background on hover */
+        color: rgb(0, 22, 93);
+        /* White text on hover */
+    }
+    
+
+
+}

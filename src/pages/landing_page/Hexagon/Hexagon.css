@@ -1,0 +1,108 @@
+.hexagon-layout {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto; /* Centers the layout horizontally */
+    animation: hexagonEnter 1s ease-out forwards; /* Animation when hexagon enters */
+
+  }
+  
+  .hexagon.center {
+    z-index: 1; /* Ensures the center hexagon is above the others */
+
+  }
+  
+  .hexagon {
+    background-color: #000947;
+    width: 93px; /* Set width */
+    height: 100px; /* Set height to maintain hexagon shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -55px; /* Half of the height */
+    margin-left: -50px; /* Half of the width */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  
+  .hexagon-text {
+    color: white;
+    font-size: 14px;
+    position: relative;
+  }
+  
+  /* Animation for hexagon entering */
+  @keyframes hexagonEnter {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(360deg);
+    }
+  }
+  
+  /* Positioning hexagons in a circular layout around the center */
+  .hexagon:not(.center) {
+    --rotation-angle: calc(60deg * var(--i));
+    transform: rotate(var(--rotation-angle)) translate(110px) rotate(calc(-1 * var(--rotation-angle)));
+  }
+  
+  /* Styles for individual hexagons */
+  .hexagon:nth-child(1) { --i: 0; }
+  .hexagon:nth-child(2) { --i: 1; }
+  .hexagon:nth-child(3) { --i: 2; }
+  .hexagon:nth-child(4) { --i: 3; }
+  .hexagon:nth-child(5) { --i: 4; }
+  .hexagon:nth-child(6) { --i: 5; }
+  
+  @media (max-width: 1000px) {
+    .hexagon-layout {
+      width: 150px;
+      height: 150px;
+      margin: 30px auto; /* Adjust as needed */
+    }
+    
+    .hexagon {
+      width: 70px; /* Adjusted width for smaller screens */
+      height: 76.6px; /* Adjusted height to maintain hexagon shape */
+      margin-top: -38.3px; /* Half of the adjusted height */
+      margin-left: -35px; /* Half of the adjusted width */
+    }
+    
+    .hexagon:not(.center) {
+      transform: rotate(var(--rotation-angle)) translate(80px) rotate(calc(-1 * var(--rotation-angle)));
+    }
+    
+    .hexagon-text {
+      font-size: 10px; /* Adjust font size if necessary */
+    }
+  }
+
+
+    @media (max-width: 768px) {
+      .hexagon-layout {
+        width: 150px;
+        height: 150px;
+        margin: 30px auto; /* Adjust as needed */
+      }
+      
+      .hexagon {
+        width: 60px; /* Adjusted width for smaller screens */
+        height: 66.6px; /* Adjusted height to maintain hexagon shape */
+        margin-top: -38.3px; /* Half of the adjusted height */
+        margin-left: -35px; /* Half of the adjusted width */
+      }
+      
+      .hexagon:not(.center) {
+        transform: rotate(var(--rotation-angle)) translate(75px) rotate(calc(-1 * var(--rotation-angle)));
+      }
+      
+      .hexagon-text {
+        font-size: 8px; /* Adjust font size if necessary */
+      }
+  }
+  

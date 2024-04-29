@@ -1,0 +1,74 @@
+.partner-companies {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background-color: #FFF; /* Ensures background is white */
+}
+
+.logo-slideshow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* You can adjust this for spacing between logos */
+  justify-content: center; /* Center logos horizontally */
+  align-items: center; /* Center logos vertically */
+}
+
+.logo-container-companies:hover {
+   transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+
+.logo-container-companies {
+  flex: 0 0 auto; /* Flex-basis set to auto for automatic adjustment */
+  max-width: 120px; /* Maximum width for each logo */
+  box-sizing: border-box; /* Include padding and border in the width and height */
+  padding: 10px; /* Space around the logo inside each container */
+  margin: 0 10px; /* Margin around each logo container */
+  text-align: center; /* Center the logos textually, just in case */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: visible; 
+
+
+}
+
+.logo-container-companies img {
+  max-width: 100%; /* Logo image will take the maximum width of the container */
+  max-height: 80px; /* Maximum height for the logos */
+  vertical-align: middle; /* Align the logo to the middle if inline or inline-block */
+}
+
+
+/* Responsive Design for Logos */
+@media (max-width: 1000px) {
+  .logo-container-companies {
+    max-width: 100px; /* Slightly smaller logos on tablet-sized devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-container-companies {
+    max-width: 80px; /* Even smaller logos on mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container-companies img {
+    max-height: 60px; /* Smaller height for the logos on very small screens */
+  }
+}
+
+/* Animation for the logos - if required */
+.logo-container-companies {
+  animation: logoFloat 5s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
