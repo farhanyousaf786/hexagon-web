@@ -18,12 +18,14 @@ const Slideshow = () => {
     <div className="slideshow">
       <div className="slideshow-slides">
         {texts.map((text, index) => (
-          <div
-            key={index}
-            className={`slide ${index === activeIndex ? 'active' : ''}`}
-          >
-            {text}
-          </div>
+        <div
+        key={index}
+        className={`slide ${index === activeIndex ? 'active' : ''}`}
+        style={{ color: 'grey' }}  // Inline style for text color
+      >
+        {text}
+      </div>
+      
         ))}
       </div>
     </div>

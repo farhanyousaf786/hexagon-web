@@ -4,7 +4,6 @@ import './SlideShowLandingPage.css'; // Make sure to create a corresponding CSS 
 const Slideshow = () => {
   return (
     <div className="slideshow-landing-page">
-       
       <div className="slide-landing-page"></div>
       <div className="slide-landing-page"></div>
       <div className="slide-landing-page"></div>

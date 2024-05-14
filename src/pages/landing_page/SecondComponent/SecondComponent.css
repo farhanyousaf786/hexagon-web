@@ -4,16 +4,15 @@
   max-width: 90%;
   margin: auto;
   overflow: hidden;
-  padding-bottom: 20px; /* Padding to lift the content up */
+  padding-bottom: 50px; /* Padding to lift the content up */
   margin-top: 200px;
-  
 
 }
 
 .app-title {
   text-align: center;
   color: #000758;
-  margin: 50px 0;
+  margin: 80px 0;
 }
 
 .app-title h1 {
@@ -36,7 +35,7 @@
   flex: 0 0 250px; /* flex-basis set to the width of the card, flex-grow and flex-shrink disabled */
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 25px rgba(146, 146, 146, 0.228);
   transition: transform 0.3s;
 }
 
@@ -61,7 +60,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 160px;
+  height: 200px;
 }
 
 .card-body h2 {
@@ -106,15 +105,115 @@
   }
   
 }
-@media (max-width: 768px) {
-  .app-title h1 {
-    font-size: 32px;
-  }
-  .latest-news-container {
-   
-    margin-top: 50px;
+@media (max-width: 900px) {
+
+
+
+
+/* SecondComponent.css */
+.latest-news-container {
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 15px; /* Padding to lift the content up */
+  margin-top: 100px;
+  margin-bottom: 30px;
   
-  }
+
+}
+
+.app-title {
+  text-align: center;
+  color: #000758;
+  margin: 25px 0;
+}
+
+.app-title h1 {
+  font-size: 35px;
+  font-family: "Sora", sans-serif;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  gap: 10px; /* Space between cards */
+  padding: 10px 0; /* Padding for aesthetics */
+  scrollbar-width: thin; /* Makes the scrollbar thin */
+  scrollbar-color: #888 #f0f0f0; /* Changes the scrollbar color */
+}
+
+.card {
+  flex: 0 0 180px; /* flex-basis set to the width of the card, flex-grow and flex-shrink disabled */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  height: 150px; /* Half of the card height */
+  background-size: cover;
+  background-position: center;
+}
+
+.card-header--title {
+  padding: 8px;
+  background-color: rgb(6, 0, 75);
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+
+.card-body p{
+  
+font-size: 10px;
+}
+
+.card-body h2 {
+  margin-bottom: 5px; /* Margin for spacing */
+}
+
+.button-primary {
+  background-color: #00044d;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  display: block;
+  font-size: 0.6rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: auto; /* Pushes the button to the bottom */
+}
+
+/* Improved Scrollbar Styles for Webkit Browsers */
+.card-list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.card-list::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.card-list::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+  border: 2px solid #f0f0f0; /* Creating padding effect inside the track */
+}
   
 }
 
@@ -131,5 +230,65 @@
 
   .app-title h1 {
     font-size: 24px;
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Dim the background */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto; /* Margin top and centering */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Responsive width */
+  max-width: 600px; /* Maximum width */
+  border-radius: 8px; /* Rounded corners for modal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.modal-header {
+  width: 100%;
+  text-align: center;
+}
+
+.modal-image {
+  width: 100%; /* Full width */
+  max-width: 300px; /* Maximum width */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 20px; /* Space between header and image */
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.5rem;
+  color: #aaaaaa;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+      width: 95%; /* More width on smaller screens */
+      margin: 10% auto;
+  }
+  .modal-image {
+      max-width: 200px; /* Smaller image on mobile */
   }
 }

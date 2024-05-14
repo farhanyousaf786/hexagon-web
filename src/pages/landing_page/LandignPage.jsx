@@ -5,15 +5,19 @@ import Slideshow from "./SlideShowLandingPage/SlideShowLandingPage"; // Import t
 import PartnerCompanies from "./PartnersList/PartnerCompanies";
 import SecondComponent from "./SecondComponent/SecondComponent";
 import SliderTextComponent from "./TextSlider/SliderTextComponent";
+import ThirdComponent from "./ThirdComponent/ThirdComponent";
+import FourthComponent from "../ForthComponent/FourthComponent";
+import FifthComponent from "../FifthComponent/FifthComponent";
 
 const LandingPage = () => {
   const hexagonTexts = [
     "Rental",
-    "Service",
-    "Repair",
-    "License",
-    "Installation",
     "Sales",
+    "Service",
+    "Installation",
+    "Engineering",
+    "Training",
+    
   ];
 
   return (
@@ -52,6 +56,9 @@ const LandingPage = () => {
         {" "}
         <PartnerCompanies />
         <SecondComponent/>
+        <FifthComponent/>
+        {/* <ThirdComponent/> */}
+        <FourthComponent/>
         
       </div>
     </div>

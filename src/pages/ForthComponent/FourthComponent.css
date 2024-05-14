@@ -1,0 +1,19 @@
+.fourth-component {
+    text-align: center; /* Centers the content */
+    background-color: #ffffff; /* Light background color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the container */
+    margin: 20px auto; /* Centering the component */
+    width: 90%; /* Responsive width */
+    padding-bottom: 50px;
+  }
+  
+  .fourth-component h1 {
+    color: #110064; /* Dark grey text color for visibility */
+    margin-bottom: 20px; /* Spacing between text and map */
+  }
+  
+  iframe {
+    border-radius: 8px; /* Rounded corners for the iframe */
+  }
+  

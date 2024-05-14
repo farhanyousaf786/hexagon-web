@@ -1,0 +1,60 @@
+.about-us-container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7; /* Light background for better readability */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft box shadow for a subtle depth */
+  }
+  
+  .company-logo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  
+  h1 {
+    color: #0056b3; /* A deeper blue for better focus */
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: #333;
+    font-size: 18px; /* Slightly larger font size for better readability */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify; /* Justified text for a cleaner look */
+  }
+  
+  .services-list-about {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .services-list-about li {
+    width: 33%; /* Three items per row in larger screens */
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #e0e0e0; /* Light grey background for each service */
+    margin: 5px;
+    border-radius: 5px; /* Rounded corners for aesthetic appeal */
+  }
+  
+  @media (max-width: 768px) {
+    .services-list-about li {
+      width: 50%; /* Two items per row in medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-list li {
+      width: 100%; /* Full width for each service in small screens */
+    }
+  }
+  

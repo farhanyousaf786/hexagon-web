@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./Header.css";
-import logo from "../../Assets/logo.jpg"; // Path to your logo
+import logo from "../../Assets/logo.jpg"; // Adjust the path to your logo
 import Slideshow from "./SlideShow/SlideShow";
 
 function Header() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isNavFixed, setIsNavFixed] = useState(false);
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -38,27 +40,44 @@ function Header() {
           <div className="header-content">
             <Slideshow />
             <div className="phone-box">
-              <span className="phone-icon">&#x260E;</span>{""}
+              {/* <span className="phone-icon">&#x260E;</span>{""} */}
               <span className="phone-text">123-456-7890</span>
             </div>
           </div>
         </div>
+
+
+        
       </div>
       <div id="nav" className={isNavFixed ? "fixed" : ""}>
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Products</button>
-        <button className="nav-button">Services</button>
-        <button className="nav-button">About Us</button>
-
-        <button className="nav-button">Contact</button>
+        <button className="nav-button" onClick={() => navigate("/")}>Home</button>
+        <button className="nav-button" onClick={() => navigate("/products")}>Products</button>
+        <button className="nav-button" onClick={() => navigate("/services")}>Services</button>
+        <button className="nav-button" onClick={() => navigate("/about-us")}>About</button>
       </div>
-      {scrollPosition > 700 && (
-        <div id="top" style={{ display: "block" }}>
-          Back to top
-        </div>
-      )}
     </div>
   );
 }
 
 export default Header;
+
+/*
+
+Rental
+Sales
+Service
+Installation
+Engineering
+Training
+------------------
+
+
+-------------------
+
+
+Skyclimber
+winsafe
+powerclimber
+spider
+easyScale
+*/

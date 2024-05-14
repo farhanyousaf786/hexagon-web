@@ -1,0 +1,26 @@
+.detail-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.detail-title {
+    color: #333;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.detail-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.detail-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}

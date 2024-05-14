@@ -1,0 +1,65 @@
+.products-page {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    font-family: 'Arial', sans-serif; /* Ensuring font consistency */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.category {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; /* Subtle separator for categories */
+}
+
+.category-title {
+    font-size: 24px;
+    color: #333; /* Dark grey color for text */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    margin: 10px 0;
+    padding: 5px 0; /* Adding padding for touch targets */
+}
+
+.item-link {
+    color: #0056b3; /* Stylish blue color for links */
+    text-decoration: none; /* Removing underline from links */
+    font-size: 18px;
+    transition: color 0.3s, transform 0.2s; /* Smooth color and transform transition */
+}
+
+.item-link:hover, .item-link:focus {
+    color: #003975; /* Darker blue when hovering or focused for better accessibility */
+    transform: translateX(5px); /* Slight move to the right on hover or focus */
+}
+
+@media (max-width: 768px) {
+    .category-title {
+        font-size: 20px;
+    }
+
+    .item-link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-title {
+        font-size: 18px;
+    }
+
+    .item-link {
+        font-size: 14px;
+    }
+
+    .products-page {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+}
